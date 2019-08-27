@@ -1,0 +1,77 @@
+@media screen and (max-width: 200px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+body {
+  margin:  0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 10px 0;
+  overflow-x: hidden;
+}
+
+.player-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.player-controller {
+  margin-top:  20px;
+}
+
+.icon-button {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+#poster {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  object-fit: cover;
+}
+.player {
+  max-width: 320px;
+  max-height: 320px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.info {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+}
+
+.info > h2 {
+  font-weight: 500;
+  font-size: 1.1rem;
+  margin-bottom: 0;
+}
+.info p {
+  font-size: .9rem;
+  color:  gray;
+  margin-top:  0;
+}
+
+.player {
+  pointer-events: none;
+}
+
+.playing {
+    filter: grayscale(0.9) blur(1px) brightness(0.7);
+    box-shadow: 1px 3px 7px black;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Plate</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="root">
+      <div class="player-container">
+        <div class="player">
+          <img id="poster" src="./assets/images/fallback.png" alt="poster" />
+        </div>
+        <div class="info">
+          <h2>Song Name</h2>
+          <p>by <span>Artist</span></p>
+          <span class="state"></span>
+        </div>
+        <div class="player-controler">
+          <img
+            class="icon-button"
+            id="player-icon"
+            src="./assets/icons/charging.png"
+            alt="play"
+            data-loaded="false"
+            onclick="playPause()"
+          />
+        </div>
+      </div>
+    </div>
+    <audio
+      crossorigin="anonymous"
+      preload="auto"
+      src=""
+      style="display:none"
+    ></audio>
+  </body>
+  <script src="./main.js"></script>
+  <script src="./mutag.min.js"></script>
+</html>

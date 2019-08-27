@@ -1,0 +1,18 @@
+{
+  "name": "Plate",
+  "id": "5d653f77b543dc16d14393c0",
+  "instantiable": true,
+  "creator": false,
+  "userInfo": false,
+  "fullscreen": true,
+  "inline": true,
+  "width": false,
+  "height": false,
+  "shareDB": false,
+  "searchable": true,
+  "servIndexes": {
+    "main": "index",
+    "fullscreen": "index"
+  },
+  "version": "0.1.1"
+}
