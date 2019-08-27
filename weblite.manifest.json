@@ -1,18 +1,34 @@
 {
-  "name": "Plate",
-  "id": "5d653f77b543dc16d14393c0",
+  "name": "plate",
+  "id": "5cf671f5229bab56f5630b9b",
   "instantiable": true,
   "creator": false,
   "userInfo": false,
   "fullscreen": true,
   "inline": true,
-  "width": false,
-  "height": false,
+  "width": 300,
+  "height": 300,
   "shareDB": false,
-  "searchable": true,
+  "searchable": false,
+  "customizeArray": [
+    {
+      "type": "textField",
+      "default": "Enter your poster link",
+      "name": "poster",
+      "title": "Poster"
+    },
+    {
+      "type": "textField",
+      "default": "Enter your audio link",
+      "name": "audio",
+      "title": "Audio"
+    }
+  ],
   "servIndexes": {
     "main": "index",
+    "customize": "index",
+    "inline": "index",
     "fullscreen": "index"
   },
-  "version": "0.1.1"
+  "version": "0.1.4"
 }

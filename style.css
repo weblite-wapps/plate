@@ -5,18 +5,21 @@
 }
 
 body {
-  margin:  0;
+  margin: 0;
   width: 100vw;
   height: 100vh;
-  background-color: white;
 }
 
 #root {
   width: 100%;
   height: 100%;
   box-sizing: border-box;
-  padding: 10px 0;
-  overflow-x: hidden;
+  padding: 10px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 }
 
 .player-container {
@@ -24,54 +27,69 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  user-select: none;
 }
 
 .player-controller {
-  margin-top:  20px;
+  margin-top: 20px;
 }
 
 .icon-button {
-  cursor: pointer;
+  position: absolute;
   width: 40px;
   height: 40px;
+  transition: all 0.3s ease;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+}
+.icon-button:hover {
+  width: 50px;
+  height: 50px;
+}
+
+.player-container:hover .icon-button,
+.player-container:focus .icon-button {
+  opacity: 1;
 }
 
 #poster {
+  position: absolute;
   width: 100%;
   height: 100%;
   vertical-align: middle;
   object-fit: cover;
+  top: 0;
+  user-select: none;
 }
 .player {
-  max-width: 320px;
-  max-height: 320px;
+  max-width: 290px;
+  max-height: 290px;
   border-radius: 50%;
   overflow: hidden;
+  box-shadow: 0px 0px 10px 1px #282933;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+@media screen and (min-width: 600) {
+  .player {
+    max-width: 400px;
+    max-height: 400px;
+  }
+}
+.player:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
-.info {
-  margin: 0 auto;
-  width: 40%;
-  text-align: center;
-}
-
-.info > h2 {
-  font-weight: 500;
-  font-size: 1.1rem;
-  margin-bottom: 0;
-}
-.info p {
-  font-size: .9rem;
-  color:  gray;
-  margin-top:  0;
-}
-
-.player {
-  pointer-events: none;
-}
-
-.playing {
-    filter: grayscale(0.9) blur(1px) brightness(0.7);
-    box-shadow: 1px 3px 7px black;
+.pause {
+  filter: grayscale(0.9) blur(1px) brightness(0.7);
+  box-shadow: 1px 3px 7px black;
 }

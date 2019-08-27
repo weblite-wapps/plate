@@ -6,35 +6,25 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root">
+    <div id="root" onclick="playPause()">
       <div class="player-container">
         <div class="player">
-          <img id="poster" src="./assets/images/fallback.png" alt="poster" />
-        </div>
-        <div class="info">
-          <h2>Song Name</h2>
-          <p>by <span>Artist</span></p>
-          <span class="state"></span>
-        </div>
-        <div class="player-controler">
           <img
-            class="icon-button"
-            id="player-icon"
-            src="./assets/icons/charging.png"
-            alt="play"
-            data-loaded="false"
-            onclick="playPause()"
+            id="poster"
+            class="pause"
+            src="./assets/images/fallback.png"
+            alt="poster"
           />
         </div>
+        <img
+          class="icon-button"
+          id="player-icon"
+          src="./assets/icons/charging.png"
+          alt="play"
+          data-loaded="false"
+        />
       </div>
     </div>
-    <audio
-      crossorigin="anonymous"
-      preload="auto"
-      src=""
-      style="display:none"
-    ></audio>
   </body>
   <script src="./main.js"></script>
-  <script src="./mutag.min.js"></script>
 </html>
