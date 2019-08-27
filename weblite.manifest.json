@@ -1,6 +1,6 @@
 {
-  "name": "plate",
-  "id": "5cf671f5229bab56f5630b9b",
+  "name": "Plate",
+  "id": "5d653f77b543dc16d14393c0",
   "instantiable": true,
   "creator": false,
   "userInfo": false,
@@ -9,7 +9,7 @@
   "width": 300,
   "height": 300,
   "shareDB": false,
-  "searchable": false,
+  "searchable": true,
   "customizeArray": [
     {
       "type": "textField",
