@@ -39,7 +39,12 @@ const setIconSrc = src => {
 // setAudio("http://farsi.khamenei.ir/ndata/news/43881/13980812_34303_16k.mp3")
 
 
-const playPause = () => {
+const playPause = (e) => {
+  if(event.target.tagName === 'BUTTON') {
+    audio.load()
+    cosole.log("BUTTON")
+  }
+
   if (playerIcon.getAttribute("data-loaded") === "false") return;
   PLAYING = !PLAYING;
 
