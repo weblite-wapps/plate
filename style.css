@@ -20,6 +20,14 @@ body {
   justify-content: center;
   align-items: center;
   user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media screen and (hover: none) {
+  #root {
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .player-container {
@@ -97,13 +105,12 @@ body {
 }
 
 
-
-@media (hover:hover) {
+/* @media (hover:hover) {
   #play-button {
       display: none;
     }
 }
-
+ */
 #play-button {
   margin-top: 10px;
   border:  none;
@@ -114,7 +121,6 @@ body {
   font-size: 14px;
   border-radius: 5px;
   outline: none;
-}
-#play-button:hover {
-  background-color:
+  background-color: #575757;
+  color: white;
 }
