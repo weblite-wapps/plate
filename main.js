@@ -7,6 +7,8 @@ let timer = null;
 // DOMS and NODES
 const poster = document.getElementById("poster");
 const playerIcon = document.getElementById("player-icon");
+const playerButton = document.getElementById("play-button");
+
 // music
 const audio = new Audio();
 audio.addEventListener(
@@ -33,16 +35,22 @@ const setIconSrc = src => {
   ADJUST SETTING WITH YOUR CUSTOMIZED DATA HERE
 ***************************************************/
 
+// setPoster("https://i.pinimg.com/originals/1b/9f/cc/1b9fcc4cc4d114d493162ed1ecdb22f3.jpg")
+// setAudio("http://farsi.khamenei.ir/ndata/news/43881/13980812_34303_16k.mp3")
+
+
 const playPause = () => {
   if (playerIcon.getAttribute("data-loaded") === "false") return;
   PLAYING = !PLAYING;
 
   if (PLAYING) {
     setIconSrc("assets/icons/pause.png");
+    playerButton.innerText = 'Pause'
     poster.classList.remove("pause");
     audio.play();
   } else {
     setIconSrc("assets/icons/play.png");
+    playerButton.innerText = 'Play'
     poster.classList.add("pause");
     audio.pause();
   }
@@ -53,6 +61,7 @@ audio.addEventListener("canplaythrough", () => {
   // messageStae.innerText = "";
   playerIcon.setAttribute("data-loaded", "true");
   setIconSrc("assets/icons/play.png");
+  playerButton.innerText = "play"
   clearInterval(timer);
   const duration = audio.duration * 1000 || 10000;
   timer = setInterval(() => {
