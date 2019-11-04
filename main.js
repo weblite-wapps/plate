@@ -65,7 +65,7 @@ audio.addEventListener("canplaythrough", () => {
   // messageStae.innerText = "";
   playerIcon.setAttribute("data-loaded", "true");
   setIconSrc("assets/icons/play.png");
-  playerButton.innerText = "play"
+  playerButton.innerText = "Play"
   clearInterval(timer);
   const duration = audio.duration * 1000 || 10000;
   timer = setInterval(() => {
