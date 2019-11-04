@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root" onclick="playPause()">
+    <div id="root">
       <div class="player-container">
-        <div class="player">
+        <div class="player" onclick="playPause()">
           <img
             id="poster"
             class="pause"
@@ -24,7 +24,7 @@
           data-loaded="false"
         />
       </div>
-      <button id="play-button">Downloading</button>
+      <button id="play-button" onclick="playPause()">Downloading</button>
     </div>
   </body>
   <script src="./main.js"></script>
