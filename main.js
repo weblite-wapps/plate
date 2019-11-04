@@ -40,11 +40,10 @@ const setIconSrc = src => {
 
 
 const playPause = (e) => {
-  if(event.target.tagName === 'BUTTON') {
-    audio.load()
-    cosole.log("BUTTON")
-  }
+  audio.load()
+  cosole.log("BUTTON", e.target.tagName)
 
+  audio.preload = 'auto'
   if (playerIcon.getAttribute("data-loaded") === "false") return;
   PLAYING = !PLAYING;
 
