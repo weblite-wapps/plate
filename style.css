@@ -104,24 +104,24 @@ body {
   font-size: 14px;
   border-radius: 5px;
   outline: none;
-  background-color: #575757;
+  background-color: #4e4e4e;
   color: white;
 }
 
 @media (hover:hover) {
   #play-button {
-      display: none;
+      /* display: none; */
     }
 }
 
-@media screen and (hover: none) {
+/* @media screen and (hover: none) { */
   #root {
     flex-direction: column;
   }
   .player {
     width:  80%;
   }
-}
+/* } */
 
 @media screen and (min-width: 600) {
   .player {
